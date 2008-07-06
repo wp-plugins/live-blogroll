@@ -6,19 +6,20 @@ Requires at least: 2.3
 Tested up to: 2.5.1
 Stable tag: trunk
 
-Shows a number of 'recent posts' for each link in your Blogroll using Ajax.
+Shows a number of 'recent posts' for each link in your Blogroll in a popup box, using Ajax.
 
 
 == Description == 
 
-Shows a number of 'recent posts' for each link in your Blogroll using Ajax. 
+Shows a number of 'recent posts' for each link in your Blogroll in a popup box, using Ajax.
 
-When the user hover above the link the rss feed from the site is automatically detected and a number of recent posts is shown dynamically in a box.
+When the user hover above the link, the RSS feed from the site is automatically detected and a number of recent posts is shown dynamically in a box.
 
 Live BlogRoll uses internal caching for feed discovery and WordPress caching for RSS feeds to make sure everything is smooth for the user.
 
 v0.3
 - Added configurable window offsets
+- Added length of post exceprt option
 
 v0.2:
 - Initial release

@@ -144,7 +144,8 @@ function WPLiveRoll_GetOptions()
 	 
 	 'number' => 4,
 	 'setx'=> -260,
-	 'sety'=> 5
+	 'sety'=> 5,
+	 'excerpt' => 25
 	
 	 );
   
@@ -181,6 +182,7 @@ function WPLiveRoll_Options()
 		$options['number']=(int) ($_POST['number']);		
 		$options['setx']=(int) ($_POST['setx']);		
 		$options['sety']=(int) ($_POST['sety']);		
+		$options['excerpt']=(int) ($_POST['excerpt']);		
 							
 		update_option('live_blogroll', $options);
 		echo '<div class="updated fade"><p>Plugin settings saved.</p></div>';
@@ -195,6 +197,7 @@ function WPLiveRoll_Options()
 	$number=$options['number'];
 	$setx=$options['setx'];
 	$sety=$options['sety'];
+	$excerpt=$options['excerpt'];
 	
 			
 	$imgpath=$wp_live_blogroll_plugin_url.'/i';	
@@ -238,6 +241,10 @@ function WPLiveRoll_Options()
 					<input type="text" name="number" size="10" value="$number"/>
 					<label for="number">Number of posts to show (default 4)</label> <br /><br />	
 					
+						<input type="text" name="excerpt" size="10" value="$excerpt"/>
+					<label for="excerpt">Length of shown post excerpt, in words (default 25)</label> <br /><br />	
+					
+					<h4>Position</h4>
 					<p>You can set the opening position of the live posts preview. Set the x and y offset from the mouse pointer where the box should appear.</p>
 					
 					<input type="text" name="setx" size="10" value="$setx"/>

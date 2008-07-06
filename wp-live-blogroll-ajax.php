@@ -107,7 +107,7 @@ function WPLiveRoll_HandleAjax($link_url)
     // we will return final HTML code in this variable
     $result='';
     
-    $options=WPLiveRoll_GetOptions	();
+    $options=WPLiveRoll_GetOptions();
     // number of posts we are showing
     $number = $options['number'];
     
@@ -166,7 +166,7 @@ function WPLiveRoll_HandleAjax($link_url)
 	            // fetch the information
 	            $item_title = $item['title'];
 	            $item_link = $item['link'];
-	            $item_description = WPLiveRoll_GetExcerpt($item['description']);
+	            $item_description = WPLiveRoll_GetExcerpt($item['description'], $options['excerpt']);
 	            
 	            // form result
 	            $result.= '<li><a target="'.$link_target.'" href="'.$item_link.'" >'.$item_title.'</a><p>'.$item_description.'</p></li>';
