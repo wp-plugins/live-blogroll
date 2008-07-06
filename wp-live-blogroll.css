@@ -1,0 +1,10 @@
+#WPLinkRoll_Popup {
+	color:#3366FF;
+	display:none;
+	font-size:9pt;
+	position:absolute;
+	width:250px;
+	border:3px solid #0088CC;
+	background:#f1f4f4;
+	padding:3px 3px;
+}
