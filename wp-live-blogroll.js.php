@@ -7,6 +7,7 @@ Part of a WP Live Blog Roll plugin
 */
 
 	require_once("../../../wp-config.php");
+	$options=WPLiveRoll_GetOptions();
 ?>
 
 // setup everything when document is ready
@@ -32,8 +33,8 @@ jQuery(document).ready(function($) {
         var mouseY = e.pageY || (e.clientY ? e.clientY + document.body.scrollTop: 0);
 
 				// offset them a little
-        mouseX += 55;
-        mouseY -= 5;
+        mouseX += <?php echo $options['setx']; ?>;
+        mouseY += <?php echo $options['sety']; ?>;
 				
 				// position our div
         $('#WPLinkRoll_Popup').css({
@@ -52,7 +53,7 @@ jQuery(document).ready(function($) {
 				    },
 				    success: function(msg) {
 				        popup.attr('innerHTML', msg);
-				        popup.fadeIn(500);
+				        popup.fadeIn(400);
 				    },
 				    error: function(msg) {
 				    		//popup.attr('innerHTML', 'Error: ' + msg.responseText);

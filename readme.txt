@@ -17,6 +17,9 @@ When the user hover above the link the rss feed from the site is automatically d
 
 Live BlogRoll uses internal caching for feed discovery and WordPress caching for RSS feeds to make sure everything is smooth for the user.
 
+v0.3
+- Added configurable window offsets
+
 v0.2:
 - Initial release
 

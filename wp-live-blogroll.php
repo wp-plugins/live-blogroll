@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: Live Blogroll
-Version: 0.2
+Version: 0.3
 Description: Shows a number of 'recent posts' for each link in your Blogroll using Ajax.
 Author: Vladimir Prelovac
 Author URI: http://www.prelovac.com/vladimir
@@ -142,7 +142,9 @@ function WPLiveRoll_GetOptions()
 	
  $options = array(
 	 
-	 'number' => 5,
+	 'number' => 4,
+	 'setx'=> -260,
+	 'sety'=> 5
 	
 	 );
   
@@ -177,9 +179,9 @@ function WPLiveRoll_Options()
 		//print_r($_POST);
 		
 		$options['number']=(int) ($_POST['number']);		
+		$options['setx']=(int) ($_POST['setx']);		
+		$options['sety']=(int) ($_POST['sety']);		
 							
-		
-	
 		update_option('live_blogroll', $options);
 		echo '<div class="updated fade"><p>Plugin settings saved.</p></div>';
 	}
@@ -191,6 +193,8 @@ function WPLiveRoll_Options()
 
 	
 	$number=$options['number'];
+	$setx=$options['setx'];
+	$sety=$options['sety'];
 	
 			
 	$imgpath=$wp_live_blogroll_plugin_url.'/i';	
@@ -205,15 +209,16 @@ function WPLiveRoll_Options()
 	<div id="sideblock" style="float:right;width:220px;margin-left:10px;"> 
 		 <h3>Information</h3>
 		 <div id="dbx-content" style="text-decoration:none;">
-			 <img src="$imgpath/home.png"><a style="text-decoration:none;" href="http://www.prelovac.com/vladimir/wordpress-plugins/live-blogroll"> Live BlogRoll Home</a><br /><br />
-			 <img src="$imgpath/idea.png"><a style="text-decoration:none;" href="http://www.prelovac.com/vladimir/wordpress-plugins/live-blogroll#comments"> Suggest a Feature</a><br /><br />
+			 <img src="$imgpath/home.png"><a style="text-decoration:none;" href="http://www.prelovac.com/vladimir/wordpress-plugins/live-blogroll"> Live Blogroll Home</a><br /><br />
+			 <img src="$imgpath/help.png"><a style="text-decoration:none;" href="http://www.prelovac.com/vladimir/wordpress-plugins/live-blogroll#comments"> Suggest a Feature</a><br /><br />
+			 <img src="$imgpath/rate.png"><a style="text-decoration:none;" href="http://wordpress.org/extend/plugins/live-blogroll/"> Rate Live Blogroll</a><br /><br />
 			 <img src="$imgpath/more.png"><a style="text-decoration:none;" href="http://www.prelovac.com/vladimir/wordpress-plugins"> My WordPress Plugins</a><br /><br />
 			 <br />
 		
 			 <p align="center">
 			 <img src="$imgpath/p1.png"></p>
 			
-			 <p> <img src="$imgpath/help.png"><a style="text-decoration:none;" href="http://www.prelovac.com/vladimir/services"> Need a WordPress Expert?</a></p>
+			 <p> <img src="$imgpath/idea.png"><a style="text-decoration:none;" href="http://www.prelovac.com/vladimir/services"> Need a WordPress Expert?</a></p>
  		</div>
  	</div>
 	
@@ -231,7 +236,15 @@ function WPLiveRoll_Options()
 					
 					
 					<input type="text" name="number" size="10" value="$number"/>
-					<label for="number">Number of posts to show (default 5)</label> <br /><br />			
+					<label for="number">Number of posts to show (default 4)</label> <br /><br />	
+					
+					<p>You can set the opening position of the live posts preview. Set the x and y offset from the mouse pointer where the box should appear.</p>
+					
+					<input type="text" name="setx" size="10" value="$setx"/>
+					<label for="setx">X offset</label> <br />
+					
+					<input type="text" name="sety" size="10" value="$sety"/>
+					<label for="sety">Y offset</label> <br /><br />			
 					
 					
 					
@@ -242,8 +255,8 @@ function WPLiveRoll_Options()
 			</form>
 		</div>
 		
-		<br/><br/><h3>&nbsp;</h3>	
-		You can edit your Live Blogroll looks by editing wp-live-blogroll.css file. Be sure to make backup if you upgrade to newer version.
+		<br/><br/><h3>Appeareance</h3>	
+		<p>You can edit your Live Blogroll looks by editing wp-live-blogroll.css file. Be sure to make backup if you upgrade to newer version.</p>
 		<br/><br/><h3>&nbsp;</h3>	
 	 </div>
 
