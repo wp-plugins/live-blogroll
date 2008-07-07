@@ -11,9 +11,9 @@ Shows a number of 'recent posts' for each link in your Blogroll in a popup box, 
 
 == Description == 
 
-Shows a number of 'recent posts' for each link in your Blogroll in a popup box, using Ajax.
+Live Blogroll will make your blogroll livelier. It will show a number of 'recent posts' for each link in your Blogroll using Ajax.
 
-When the user hover above the link, the RSS feed from the site is automatically detected and a number of recent posts is shown dynamically in a box.
+When the user hovers the mouse above the link, RSS feed from the site is automatically discovered and a number of recent posts is shown dynamically in a box.
 
 Live BlogRoll uses internal caching for feed discovery and WordPress caching for RSS feeds to make sure everything is smooth for the user.
 
