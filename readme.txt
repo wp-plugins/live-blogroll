@@ -17,6 +17,11 @@ When the user hover above the link, the RSS feed from the site is automatically 
 
 Live BlogRoll uses internal caching for feed discovery and WordPress caching for RSS feeds to make sure everything is smooth for the user.
 
+The looks of the hover box are fully customizable with CSS, and the position is editable in the options.
+
+
+Change log
+
 v0.4
 - Fixed IE7 compability issue
 
@@ -55,7 +60,7 @@ You should have received a copy of the GNU General Public License along with Cat
 
 = How does it work? =
 
-It fetches lasts posts from a target site from their RSS feed. The posts are then displayed in a hover box. 
+Live Blogroll uses Ajax to dynamically retrieve lasts posts sites in your Blogroll. The posts are then displayed in a popup hover box.
 
 Live Blogroll will first try to search for rss feed link supplied in your blogroll data. If not found it will load the target page and try to autodiscover the feed. If found this feed will be filled in to your blogroll entry for later faster access.
 
