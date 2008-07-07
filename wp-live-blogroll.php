@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: Live Blogroll
-Version: 0.3
+Version: 0.4
 Description: Shows a number of 'recent posts' for each link in your Blogroll using Ajax.
 Author: Vladimir Prelovac
 Author URI: http://www.prelovac.com/vladimir
@@ -27,29 +27,10 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-/*
-add_filter('wp_list_bookmarks', check_me);
-
-function check_me($list)
-{
-	print_r($list);
-	echo $list;
-	echo "vlado";
-}*/
-
-/* Version check */
-
-
-//instantiate the class
-/*if (class_exists('WPrapAjaxEditComments')) {
-	if (get_bloginfo('version') >= "2.5") {
-		$WPrapAjaxEditComments = new WPrapAjaxEditComments();
-	}
-} */
 
 global $wp_version;	
 
-$exit_msg='WP Live BlogRoll requires WordPress 2.3 or newer. <a href="http://codex.wordpress.org/Upgrading_WordPress">Please update!</a>';
+$exit_msg='Live BlogRoll requires WordPress 2.3 or newer. <a href="http://codex.wordpress.org/Upgrading_WordPress">Please update!</a>';
 
 if (version_compare($wp_version,"2.3","<"))
 {
@@ -234,10 +215,6 @@ function WPLiveRoll_Options()
 					
 					<p>Live Blogroll shows real-time RSS feeds for sites in your BlogRoll.</p>
 						
-					
-					
-					
-					
 					<input type="text" name="number" size="10" value="$number"/>
 					<label for="number">Number of posts to show (default 4)</label> <br /><br />	
 					
@@ -252,7 +229,6 @@ function WPLiveRoll_Options()
 					
 					<input type="text" name="sety" size="10" value="$sety"/>
 					<label for="sety">Y offset</label> <br /><br />			
-					
 					
 					
 					<br />					

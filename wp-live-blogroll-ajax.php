@@ -160,7 +160,7 @@ function WPLiveRoll_HandleAjax($link_url)
 	        $feedfile->items = array_slice($feedfile->items, 0, $number);
 	        
 	        // create HTML out of posts
-	        $result.= '<div><ul>';
+	        $result.= '<ul>';
 	        foreach($feedfile->items as $item ) {
 	            
 	            // fetch the information
@@ -169,9 +169,9 @@ function WPLiveRoll_HandleAjax($link_url)
 	            $item_description = WPLiveRoll_GetExcerpt($item['description'], $options['excerpt']);
 	            
 	            // form result
-	            $result.= '<li><a target="'.$link_target.'" href="'.$item_link.'" >'.$item_title.'</a><p>'.$item_description.'</p></li>';
+	            $result.= '<li><a class="lb_link" target="'.$link_target.'" href="'.$item_link.'" >'.$item_title.'</a><p class="lb_desc">'.$item_description.'</p></li>';
 	        }
-	        $result.= '</ul></div>';
+	        $result.= '</ul>';
 	    } else {
 	        // in case we were unable to parse the feed
 	        $result.= "No posts available.";

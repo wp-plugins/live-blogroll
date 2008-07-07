@@ -17,6 +17,9 @@ When the user hover above the link, the RSS feed from the site is automatically 
 
 Live BlogRoll uses internal caching for feed discovery and WordPress caching for RSS feeds to make sure everything is smooth for the user.
 
+v0.4
+- Fixed IE7 compability issue
+
 v0.3
 - Added configurable window offsets
 - Added length of post exceprt option
@@ -54,9 +57,11 @@ You should have received a copy of the GNU General Public License along with Cat
 
 It fetches lasts posts from a target site from their RSS feed. The posts are then displayed in a hover box. 
 
-= What if the site does not have a feed?
+Live Blogroll will first try to search for rss feed link supplied in your blogroll data. If not found it will load the target page and try to autodiscover the feed. If found this feed will be filled in to your blogroll entry for later faster access.
 
-Live Blogroll will not do anything in that case.
+= Live Blogroll does not show a preview for some of my sites, why is that?
+
+The site may not have the RSS feed listed in it's HTML. Or simply it is unavailable at the moment. 
 
 = Can I suggest an feature for the plugin? =
 
