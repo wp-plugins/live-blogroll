@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: Live Blogroll
-Version: 0.4
+Version: 0.4.1
 Description: Shows a number of 'recent posts' for each link in your Blogroll using Ajax.
 Author: Vladimir Prelovac
 Author URI: http://www.prelovac.com/vladimir
@@ -104,9 +104,11 @@ add_action('wp_print_scripts', 'WPLiveRoll_ScriptsAction');
 function WPLiveRoll_ScriptsAction() 
 { 
 	global $wp_live_blogroll_plugin_url;
-	
-	wp_enqueue_script('jquery');
-	wp_enqueue_script('wp_live_roll_script', $wp_live_blogroll_plugin_url.'/wp-live-blogroll.js.php', array('jquery')); 
+	if (!is_admin())
+	{
+		wp_enqueue_script('jquery');
+		wp_enqueue_script('wp_live_roll_script', $wp_live_blogroll_plugin_url.'/wp-live-blogroll.js.php', array('jquery')); 
+	}
 }
 
 add_action('wp_head', 'WPLiveRoll_HeadAction' );

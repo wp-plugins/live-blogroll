@@ -3,7 +3,7 @@ Contributors: freediver
 Donate link: https://www.networkforgood.org/donation/MakeDonation.aspx?ORGID2=510144434
 Tags:  ajax, sidebar, links, blogroll, bookmarks, ajax, jquery
 Requires at least: 2.3
-Tested up to: 2.5.1
+Tested up to: 2.6.1
 Stable tag: trunk
 
 Shows a number of 'recent posts' for each link in your Blogroll in a popup box, using Ajax.
