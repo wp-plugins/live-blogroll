@@ -196,7 +196,7 @@ function WPLiveRoll_Options()
 		 <h3>Information</h3>
 		 <div id="dbx-content" style="text-decoration:none;">
 			 <img src="$imgpath/home.png"><a style="text-decoration:none;" href="http://www.prelovac.com/vladimir/wordpress-plugins/live-blogroll"> Live Blogroll Home</a><br /><br />
-			 <img src="$imgpath/help.png"><a style="text-decoration:none;" href="http://www.prelovac.com/vladimir/wordpress-plugins/live-blogroll#comments"> Suggest a Feature</a><br /><br />
+			 <img src="$imgpath/help.png"><a style="text-decoration:none;" href="http://www.prelovac.com/vladimir/forum"> Plugin Forums</a><br /><br />
 			 <img src="$imgpath/rate.png"><a style="text-decoration:none;" href="http://wordpress.org/extend/plugins/live-blogroll/"> Rate Live Blogroll</a><br /><br />
 			 <img src="$imgpath/more.png"><a style="text-decoration:none;" href="http://www.prelovac.com/vladimir/wordpress-plugins"> My WordPress Plugins</a><br /><br />
 			 <br />
