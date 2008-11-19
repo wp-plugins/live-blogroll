@@ -88,6 +88,19 @@ function getRSSLocation($html, $location){
         return false;
     }
 }
+
+
+    function grab_rss_url($html){
+     
+   
+     
+    $success = preg_match('/\<link.*href=\"(.*)\" \/\>/is', $html, $matches);
+     return $matches;
+    //return $matches[1];
+     
+   }
+
+
 	
 	function get_url($url)	{
 		if (function_exists('file_get_contents')) {
@@ -104,6 +117,9 @@ function getRSSLocation($html, $location){
 
 function WPLiveRoll_HandleAjax($link_url)
 {
+    // check security
+    check_ajax_referer( "wp-live-blogroll" );
+
     // we will return final HTML code in this variable
     $result='';
     
@@ -134,6 +150,17 @@ function WPLiveRoll_HandleAjax($link_url)
     
     if (!$link_rss)
     {
+    	
+    	$result=grab_rss_url(get_url($link_url));
+    	
+			ob_start();
+			var_dump($result);
+			$a=ob_get_contents();
+			ob_end_clean();
+
+    	die ('<pre>'.htmlspecialchars($a,ENT_QUOTES).'</pre>');
+    	
+    	
     	$feed_url=getRSSLocation( get_url($link_url), $link_url);
     	
     	if (!$feed_url)

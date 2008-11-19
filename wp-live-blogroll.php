@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: Live Blogroll
-Version: 0.4.1
+Version: 0.5
 Description: Shows a number of 'recent posts' for each link in your Blogroll using Ajax.
 Author: Vladimir Prelovac
 Author URI: http://www.prelovac.com/vladimir

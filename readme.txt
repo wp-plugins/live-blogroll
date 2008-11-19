@@ -22,6 +22,9 @@ The looks of the hover box are fully customizable with CSS, and the position is 
 
 Change log
 
+v0.5
+- Security update
+
 v0.4
 - Fixed IE7 compability issue
 
@@ -32,6 +35,7 @@ v0.3
 v0.2:
 - Initial release
 
+Plugin by Vladimir Prelovac. Need <a href="http://www.prelovac.com/vladimir/services">WordPress Services</a>?
 
 == Installation ==
 

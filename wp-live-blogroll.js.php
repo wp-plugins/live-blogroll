@@ -8,6 +8,8 @@ Part of a WP Live Blog Roll plugin
 
 	require_once("../../../wp-config.php");
 	$options=WPLiveRoll_GetOptions();
+        $nonce = wp_create_nonce( 'wp-live-blogroll' );
+
 ?>
 
 // setup everything when document is ready
@@ -38,7 +40,8 @@ jQuery(document).ready(function($) {
 				    url: '<?php echo $wp_live_blogroll_plugin_url ?>/wp-live-blogroll-ajax.php',
 				    timeout: 3000,
 				    data: {
-				        link_url: this.href
+				        link_url: this.href,
+				        _ajax_nonce: '<?php echo $nonce; ?>'
 				    },
 				    success: function(msg) {
 				       
