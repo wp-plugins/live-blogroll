@@ -21,6 +21,8 @@ The looks of the hover box are fully customizable with CSS, and the position is 
 
 
 Change log
+v0.5.1
+- fixed an error in feed display
 
 v0.5
 - Security update

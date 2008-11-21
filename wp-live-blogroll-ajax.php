@@ -150,17 +150,7 @@ function WPLiveRoll_HandleAjax($link_url)
     
     if (!$link_rss)
     {
-    	
-    	$result=grab_rss_url(get_url($link_url));
-    	
-			ob_start();
-			var_dump($result);
-			$a=ob_get_contents();
-			ob_end_clean();
-
-    	die ('<pre>'.htmlspecialchars($a,ENT_QUOTES).'</pre>');
-    	
-    	
+	
     	$feed_url=getRSSLocation( get_url($link_url), $link_url);
     	
     	if (!$feed_url)
