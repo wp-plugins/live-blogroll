@@ -3,7 +3,7 @@ Contributors: freediver
 Donate link: https://www.networkforgood.org/donation/MakeDonation.aspx?ORGID2=510144434
 Tags:  ajax, sidebar, links, blogroll, bookmarks, ajax, jquery
 Requires at least: 2.3
-Tested up to: 2.6.1
+Tested up to: 2.8.4
 Stable tag: trunk
 
 Shows a number of 'recent posts' for each link in your Blogroll in a popup box, using Ajax.
@@ -19,25 +19,19 @@ Live BlogRoll uses internal caching for feed discovery and WordPress caching for
 
 The looks of the hover box are fully customizable with CSS, and the position is editable in the options.
 
+Plugin by Vladimir Prelovac. In need of <a href="http://www.prelovac.com/vladimir/services">WordPress Consulting Services</a>?
 
-Change log
-v0.5.1
-- fixed an error in feed display
+== Changelog ==
 
-v0.5
-- Security update
+= 0.5.2 =
+* Updated to 2.8.4 support
 
-v0.4
-- Fixed IE7 compability issue
+= 0.5.1 =
+* fixed an error in feed display
 
-v0.3
-- Added configurable window offsets
-- Added length of post exceprt option
+= 0.5 =
+* Security update
 
-v0.2:
-- Initial release
-
-Plugin by Vladimir Prelovac. Need <a href="http://www.prelovac.com/vladimir/services">WordPress Services</a>?
 
 == Installation ==
 
