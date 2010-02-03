@@ -2,8 +2,8 @@
 Contributors: freediver
 Donate link: https://www.networkforgood.org/donation/MakeDonation.aspx?ORGID2=510144434
 Tags:  ajax, sidebar, links, blogroll, bookmarks, ajax, jquery
-Requires at least: 2.3
-Tested up to: 2.8.4
+Requires at least: 2.5
+Tested up to: 2.9.1
 Stable tag: trunk
 
 Shows a number of 'recent posts' for each link in your Blogroll in a popup box, using Ajax.
@@ -22,6 +22,10 @@ The looks of the hover box are fully customizable with CSS, and the position is 
 Plugin by Vladimir Prelovac. In need of <a href="http://www.prelovac.com/vladimir/services">WordPress Consulting Services</a>?
 
 == Changelog ==
+
+= 0.6.2 =
+* Rewrite of the RSS engine (credits to Christopher G. Stach II http://ldsys.net/~cgs/)
+* Fixes validation issues
 
 = 0.5.2 =
 * Updated to 2.8.4 support

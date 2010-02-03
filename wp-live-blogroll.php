@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: Live Blogroll
-Version: 0.5.2
+Version: 0.6.2
 Description: Shows a number of 'recent posts' for each link in your Blogroll using Ajax.
 Author: Vladimir Prelovac
 Author URI: http://www.prelovac.com/vladimir
@@ -30,9 +30,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 global $wp_version;	
 
-$exit_msg='Live BlogRoll requires WordPress 2.3 or newer. <a href="http://codex.wordpress.org/Upgrading_WordPress">Please update!</a>';
+$exit_msg='Live BlogRoll requires WordPress 2.5 or newer. <a href="http://codex.wordpress.org/Upgrading_WordPress">Please update!</a>';
 
-if (version_compare($wp_version,"2.3","<"))
+if (version_compare($wp_version,"2.5","<"))
 {
 	exit ($exit_msg);
 }
@@ -91,13 +91,25 @@ function WPLiveRoll_GetBookmarksFilter($items)
     return $items;
 }
 
-
-add_filter('wp_list_bookmarks', WPLiveRoll_ListBookmarksFilter);
+/*
+ Breaks validation -cgs
 
 function WPLiveRoll_ListBookmarksFilter($content)
 {
-	return '<span class="livelinks">'.$content.'</span>';
+	//return '<span class="livelinks">'.$content.'</span>';
+	return $content;
+	//return wp_list_bookmarks(array('class' => 'livelinks'));
 }
+
+add_filter('wp_list_bookmarks', WPLiveRoll_ListBookmarksFilter);
+*/
+
+function WPLiveRoll_widget_links_args_filter($args) {
+	$args['class'] .= ' livelinks';
+	return $args;
+}
+
+add_filter('widget_links_args', 'WPLiveRoll_widget_links_args_filter');
 
 add_action('wp_print_scripts', 'WPLiveRoll_ScriptsAction');
 
@@ -148,7 +160,7 @@ function WPLiveRoll_GetOptions()
 
 add_action('admin_menu', 'WPLiveRoll_AdminMenu');
 
-	// Hook the options mage
+// Hook the options page
 function WPLiveRoll_AdminMenu() {
 	add_options_page('Live BlogRoll Options', 'Live Blogroll', 8, basename(__FILE__),'WPLiveRoll_Options');	
 } 
