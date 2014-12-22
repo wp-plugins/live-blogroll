@@ -3,7 +3,7 @@ Contributors: freediver
 Donate link: https://www.networkforgood.org/donation/MakeDonation.aspx?ORGID2=510144434
 Tags:  ajax, sidebar, links, blogroll, bookmarks, ajax, jquery
 Requires at least: 2.5
-Tested up to: 2.9.1
+Tested up to: 4.2
 Stable tag: trunk
 
 Shows a number of 'recent posts' for each link in your Blogroll in a popup box, using Ajax.
@@ -19,7 +19,7 @@ Live BlogRoll uses internal caching for feed discovery and WordPress caching for
 
 The looks of the hover box are fully customizable with CSS, and the position is editable in the options.
 
-Plugin by Vladimir Prelovac. In need of <a href="http://www.prelovac.com/vladimir/services">WordPress Consulting Services</a>?
+Plugin by <a href="http://www.prelovac.com/vladimir">Vladimir Prelovac</a>.
 
 == Changelog ==
 
@@ -71,11 +71,3 @@ Live Blogroll will first try to search for rss feed link supplied in your blogro
 = Live Blogroll does not show a preview for some of my sites, why is that?
 
 The site may not have the RSS feed listed in it's HTML. Or simply it is unavailable at the moment. 
-
-= Can I suggest an feature for the plugin? =
-
-Of course, visit <a href="http://www.prelovac.com/vladimir/wordpress-plugins/live-blogroll#comments">Live Blogroll Home Page</a>
-
-= I love your work, are you available for hire? =
-
-Yes I am, visit my <a href="http://www.prelovac.com/vladimir/services">WordPress Services</a> page to find out more.
