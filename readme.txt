@@ -18,7 +18,7 @@ When the user hovers the mouse above the link, RSS feed from the site is automat
 Live BlogRoll uses internal caching for feed discovery and WordPress caching for RSS feeds to make sure everything is smooth for the user.
 
 The looks of the hover box are fully customizable with CSS, and the position is editable in the options.
-
+ 
 Plugin by <a href="http://www.prelovac.com/vladimir">Vladimir Prelovac</a>.
 
 == Changelog ==
